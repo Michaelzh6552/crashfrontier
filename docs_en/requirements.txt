@@ -1,0 +1,4 @@
+# Build dependencies for the documentation site. Runtime dependencies of the
+# package are in the repository-root pyproject.toml.
+mkdocs>=1.6
+mkdocs-material>=9.5

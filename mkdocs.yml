@@ -1,0 +1,148 @@
+# Documentation sources live in docs_en/; HTML is written to site_en/.
+site_name: Crash Frontier
+site_description: Joint bounds on crash probability and conditional depth from option bid-ask quotes
+site_url: https://michaelzh6552.github.io/crashfrontier/
+repo_url: https://github.com/Michaelzh6552/crashfrontier
+docs_dir: docs_en
+site_dir: site_en
+use_directory_urls: false
+
+# Keep requirements.txt out of the site. A leading / avoids matching nested paths.
+exclude_docs: |
+  /requirements.txt
+
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+    absolute_links: info
+  links:
+    not_found: warn
+    anchors: warn
+    unrecognized_links: warn
+    absolute_links: info
+
+theme:
+  name: material
+  language: en
+  font: false
+  logo: assets/brand/crashfrontier-mark.svg
+  favicon: assets/brand/crashfrontier-mark.svg
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+extra_css:
+  - stylesheets/crashfrontier.css
+
+extra_javascript:
+  - javascripts/theme.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mermaid@11.12.0/dist/mermaid.min.js
+  - javascripts/mermaid.js
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: cf-mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+
+nav:
+  - Home: index.md
+  - Getting started:
+    - Install: getting-started/install.md
+    - Market data: getting-started/data.md
+    - Plot the first figure: getting-started/first-frontier.md
+    - Read the figure and the numbers: getting-started/read-the-chart.md
+  - User guide:
+    - Overview: user-guide/index.md
+    - Select a cross-section: user-guide/select-cross-section.md
+    - Risk-neutral: user-guide/risk-neutral.md
+    - Physical γ=1/2: user-guide/physical.md
+    - Quote sets: user-guide/quote-sets.md
+    - Report page: user-guide/reports.md
+    - Scenario check: user-guide/scenario.md
+    - Term structure: user-guide/term-structure.md
+    - Threshold profile: user-guide/threshold-profile.md
+    - Time series: user-guide/time-series.md
+    - Export results: user-guide/results-export.md
+    - Troubleshooting: user-guide/troubleshooting.md
+  - Data guide:
+    - Overview: data-guide/index.md
+    - Formats and column aliases: data-guide/formats-columns.md
+    - Dates and strikes: data-guide/dates-strikes.md
+    - Read from a directory: data-guide/from-directory.md
+    - Read from in-memory tables: data-guide/from-frames.md
+    - One day, one expiry: data-guide/from-quotes.md
+    - Forwards and rates: data-guide/forwards-rates.md
+    - Filters: data-guide/filters.md
+    - Large-file index: data-guide/large-files.md
+    - Validation checklist: data-guide/validation-checklist.md
+  - Examples: examples/index.md
+  - Developer guide:
+    - Overview: developer-guide/index.md
+    - Architecture: developer-guide/architecture.md
+    - Data pipeline: developer-guide/data-pipeline.md
+    - Risk-neutral LP: developer-guide/risk-neutral.md
+    - Physical SOCP: developer-guide/physical.md
+    - Geometry reconstruction: developer-guide/geometry.md
+    - Depth transform: developer-guide/depth-transform.md
+    - Plotting and export: developer-guide/plotting-export.md
+    - Series and parallelism: developer-guide/series-parallel.md
+    - Tests and numerics: developer-guide/testing-numerics.md
+    - Extending: developer-guide/extending.md
+  - Reference:
+    - Overview: reference/index.md
+    - Python API: reference/api.md
+    - Results and schemas: reference/results.md
+    - Exceptions: reference/errors.md
+    - Configuration: reference/configuration.md
+    - Papers: reference/papers.md
+    - Command-line appendix: reference/cli.md

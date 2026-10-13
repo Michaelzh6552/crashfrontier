@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 860" role="img" aria-labelledby="cf-hero-title cf-hero-desc">
+  <title id="cf-hero-title">Crash frontier concept</title>
+  <desc id="cf-hero-desc">Nested identified sets for crash probability and conditional depth — put pair, local eight, complete put wing — inside the region that separate marginal bounds allow.</desc>
+  <defs>
+    <linearGradient id="cfWingFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3c464" stop-opacity="0.36"/>
+      <stop offset="1" stop-color="#d99f35" stop-opacity="0.10"/>
+    </linearGradient>
+    <linearGradient id="cfGoldStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d99f35"/>
+      <stop offset="0.5" stop-color="#f5cd70"/>
+      <stop offset="1" stop-color="#d99f35"/>
+    </linearGradient>
+    <linearGradient id="cfPairFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7ea4dd" stop-opacity="0.17"/>
+      <stop offset="1" stop-color="#7ea4dd" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="cfEightFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8fb0e0" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#8fb0e0" stop-opacity="0.07"/>
+    </linearGradient>
+    <style>
+      .draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: cf-draw 1s cubic-bezier(0.4, 0, 0.2, 1) both; }
+      .fade { opacity: 0; animation: cf-in 0.7s ease both; }
+      @keyframes cf-draw { to { stroke-dashoffset: 0; } }
+      @keyframes cf-in { to { opacity: 1; } }
+      @keyframes cf-pulse { 0%, 100% { stroke-opacity: 0.55; } 50% { stroke-opacity: 0.12; } }
+
+      .cf-axis-v { animation-duration: 0.55s; animation-delay: 0.1s; }
+      .cf-axis-h { animation-duration: 0.7s; animation-delay: 0.25s; }
+      .cf-axlabel { animation-delay: 0.6s; }
+
+      .cf-box { animation-duration: 1.2s; animation-delay: 0.55s; }
+      .cf-boxlabel { animation-delay: 1.2s; }
+
+      .cf-pair-stroke { animation-duration: 1.05s; animation-delay: 1.15s; }
+      .cf-pair-fill { animation-delay: 1.75s; }
+      .cf-pair-label { animation-delay: 1.65s; }
+
+      .cf-eight-stroke { animation-duration: 1.05s; animation-delay: 1.95s; }
+      .cf-eight-fill { animation-delay: 2.55s; }
+      .cf-eight-label { animation-delay: 2.45s; }
+
+      .cf-wing-stroke { animation-duration: 1.05s; animation-delay: 2.75s; }
+      .cf-wing-fill { animation-delay: 3.35s; }
+      .cf-wing-label { animation-delay: 3.25s; }
+
+      .cf-dot { animation-delay: 3.7s; animation-duration: 0.45s; }
+      .cf-dot-label { animation-delay: 3.85s; }
+      .cf-ring { opacity: 0; animation: cf-in 0.5s ease 3.7s both, cf-pulse 2.6s ease-in-out 4.3s infinite; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .draw, .fade, .cf-ring { animation: none; stroke-dashoffset: 0; opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <!-- dotted grid -->
+  <g stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" stroke-dasharray="2 7">
+    <line x1="290" y1="130" x2="290" y2="750"/>
+    <line x1="470" y1="130" x2="470" y2="750"/>
+    <line x1="650" y1="130" x2="650" y2="750"/>
+    <line x1="830" y1="130" x2="830" y2="750"/>
+    <line x1="1010" y1="130" x2="1010" y2="750"/>
+    <line x1="100" y1="220" x2="1100" y2="220"/>
+    <line x1="100" y1="350" x2="1100" y2="350"/>
+    <line x1="100" y1="480" x2="1100" y2="480"/>
+    <line x1="100" y1="610" x2="1100" y2="610"/>
+  </g>
+
+  <!-- axes, drawn first -->
+  <g stroke="#8ba3c4" stroke-opacity="0.55" stroke-width="1.5" stroke-linecap="round">
+    <line class="draw cf-axis-v" pathLength="1" x1="100" y1="126" x2="100" y2="750"/>
+    <line class="draw cf-axis-h" pathLength="1" x1="100" y1="750" x2="1100" y2="750"/>
+  </g>
+
+  <!-- axis labels -->
+  <g font-family="Iowan Old Style, Palatino, Georgia, serif" font-style="italic" fill="#c9d8ec">
+    <text class="fade cf-axlabel" x="100" y="100" font-size="36" text-anchor="middle">How deep?<tspan dy="10" font-size="21"> s</tspan><tspan dy="4" font-size="17">K</tspan></text>
+    <text class="fade cf-axlabel" x="1100" y="800" font-size="36" text-anchor="end">How likely?<tspan dy="10" font-size="21"> p</tspan><tspan dy="4" font-size="17">K</tspan></text>
+  </g>
+
+  <!-- what separate marginal bounds allow -->
+  <rect class="fade cf-box" x="150" y="188" width="900" height="500" rx="10"
+        fill="none" stroke="#aebdd2" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="3 7"/>
+  <text class="fade cf-boxlabel" x="176" y="224" font-family="Iowan Old Style, Palatino, Georgia, serif"
+        font-size="15" letter-spacing="3.5" fill="#7e93b0">MARGINAL BOUNDS</text>
+
+  <!-- put pair: outermost identified set -->
+  <path class="fade cf-pair-fill" d="M170 356 C310 232 520 240 710 352 C845 432 955 540 1050 652
+           C970 618 865 575 715 535 C525 482 335 440 170 356 Z"
+        fill="url(#cfPairFill)" stroke="none"/>
+  <path class="draw cf-pair-stroke" pathLength="1" d="M170 356 C310 232 520 240 710 352 C845 432 955 540 1050 652
+           C970 618 865 575 715 535 C525 482 335 440 170 356 Z"
+        fill="none" stroke="#6f97d4" stroke-width="2" stroke-opacity="0.8"/>
+  <text class="fade cf-pair-label" x="430" y="228" font-family="Iowan Old Style, Palatino, Georgia, serif"
+        font-size="18.5" letter-spacing="4" fill="#8fa6c6">PUT PAIR</text>
+
+  <!-- local eight -->
+  <path class="fade cf-eight-fill" d="M255 398 C380 298 540 308 690 392 C805 458 895 545 972 618
+           C900 585 810 552 685 522 C540 487 395 452 255 398 Z"
+        fill="url(#cfEightFill)" stroke="none"/>
+  <path class="draw cf-eight-stroke" pathLength="1" d="M255 398 C380 298 540 308 690 392 C805 458 895 545 972 618
+           C900 585 810 552 685 522 C540 487 395 452 255 398 Z"
+        fill="none" stroke="#8fb0e0" stroke-width="2.2" stroke-opacity="0.9"/>
+  <text class="fade cf-eight-label" x="580" y="300" font-family="Iowan Old Style, Palatino, Georgia, serif"
+        font-size="18.5" letter-spacing="4" fill="#a9bfe0">LOCAL EIGHT</text>
+
+  <!-- complete put wing: the crash frontier -->
+  <path class="fade cf-wing-fill" d="M348 440 C452 362 575 366 688 424 C782 472 842 532 892 585
+           C842 565 782 545 688 525 C575 498 462 478 348 440 Z"
+        fill="url(#cfWingFill)" stroke="none"/>
+  <path class="draw cf-wing-stroke" pathLength="1" d="M348 440 C452 362 575 366 688 424 C782 472 842 532 892 585
+           C842 565 782 545 688 525 C575 498 462 478 348 440 Z"
+        fill="none" stroke="url(#cfGoldStroke)" stroke-width="5" stroke-linejoin="round"/>
+  <text class="fade cf-wing-label" x="618" y="392" font-family="Iowan Old Style, Palatino, Georgia, serif"
+        font-size="18.5" letter-spacing="4" fill="#eec25f">COMPLETE WING</text>
+
+  <!-- scenario check marker, lights up last -->
+  <g>
+    <circle class="cf-ring" cx="652" cy="470" r="17" fill="none" stroke="#f3c464" stroke-width="1.5"/>
+    <circle class="fade cf-dot" cx="652" cy="470" r="5.5" fill="#f3c464"/>
+    <text class="fade cf-dot-label" x="682" y="464" font-family="Iowan Old Style, Palatino, Georgia, serif"
+          font-size="17" letter-spacing="3.5" fill="#e7b558">SCENARIO</text>
+    <text class="fade cf-dot-label" x="682" y="486" font-family="Iowan Old Style, Palatino, Georgia, serif"
+          font-size="17" letter-spacing="3.5" fill="#e7b558">CHECK</text>
+  </g>
+</svg>

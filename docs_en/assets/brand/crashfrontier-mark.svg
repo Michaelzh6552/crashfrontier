@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="cf-mark-title">
+  <title id="cf-mark-title">Crash Frontier</title>
+  <rect x="2" y="2" width="60" height="60" rx="2" fill="#F4F7FB" stroke="#2C4E86" stroke-width="4"/>
+  <path fill="#17202A" d="M15 12H21V44H51V50H15Z"/>
+  <path fill="#2C4E86" d="M26 31L39 27.5L50 30.5L50 37.5L39 34.5L26 38Z"/>
+</svg>

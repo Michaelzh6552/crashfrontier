@@ -1,0 +1,20 @@
+# --- 项目私有内容，不上传 ---
+# 数据缓存（含本机路径与受许可数据索引）
+DATA/
+# 运行生成的图表
+outputs/
+# 预构建站点（网页通过 gh-pages 分支发布，不进主分支）
+site_en/
+
+# --- Python 标准忽略 ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.venv-check/
+.pytest_cache/
+
+# --- 系统文件 ---
+.DS_Store

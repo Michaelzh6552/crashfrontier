@@ -1,0 +1,9 @@
+{
+  "name": "crashfrontier-docs",
+  "private": true,
+  "description": "Crash Frontier documentation site (MkDocs Material).",
+  "scripts": {
+    "dev": "python3 -m mkdocs serve -a 0.0.0.0:${PORT:-7100}",
+    "build": "python3 -m mkdocs build -d site_en"
+  }
+}
