@@ -1,12 +1,12 @@
-# --- 项目私有内容，不上传 ---
-# 数据缓存（含本机路径与受许可数据索引）
+# Project-private content (not published)
+# Data cache (local paths and licensed-data index)
 DATA/
-# 运行生成的图表
+# Generated figures and tables
 outputs/
-# 预构建站点（网页通过 gh-pages 分支发布，不进主分支）
+# Prebuilt site (published via the gh-pages workflow, not the main branch)
 site_en/
 
-# --- Python 标准忽略 ---
+# Python
 __pycache__/
 *.py[cod]
 *.egg-info/
@@ -16,5 +16,5 @@ dist/
 .venv-check/
 .pytest_cache/
 
-# --- 系统文件 ---
+# OS
 .DS_Store
