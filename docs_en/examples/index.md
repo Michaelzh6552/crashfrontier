@@ -75,7 +75,7 @@ Self-contained γ=0 run: a discrete risk-neutral law for \(X=S_T/F\) with
 `CrossSection.from_quotes` → `compute_frontier` → `plot_frontier_panels` /
 `save_figure` / `write_frontier`. No `DATA/`, no `tests/`, no repository.
 
-The atoms are palindromic around 1, so the mean is 1 by construction.
+The support points and weights are symmetric around 1, so the mean is 1 by construction.
 Strikes sit in the default put-wing log-moneyness window
 \([-0.35,0.05]\). Calendar spacing is 14 days (inside the default
 \([7,120]\) day filter). Forward \(F=1\) and \(r=0\) so put prices equal

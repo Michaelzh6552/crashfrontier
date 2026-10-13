@@ -41,7 +41,7 @@ Caught: `CrashFrontierError` and `ValueError`.
 
 ## Threshold profile
 
-Calls `compute_frontier` for each $K`. No parallelism. Failures write
+Calls `compute_frontier` for each $K$. No parallelism. Failures write
 `error`.
 
 ## Date sampling `pick_dates`

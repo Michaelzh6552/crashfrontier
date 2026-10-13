@@ -31,7 +31,7 @@ and `conftest.py` under `tmp_path`.
 
 `make_option_rows`: three dates (2021-07-21/22/28), expiries 7/14/30 days,
 AM/PM pair at 30 days, Black-76 $\sigma=0.18$, spread $0.0005F$,
-`strike_price×1000`, `volume` 10 for $x\ge 0.75`. Directory variants cover
+`strike_price×1000`, `volume` 10 for $x\ge 0.75$. Directory variants cover
 uppercase semicolon, `YYYYMMDD`+gz, DATE9 split, stata, parquet, and a pure
 DataFrame.
 
@@ -43,7 +43,7 @@ strike grid, `spread` added on the normalised call.
 `bimodal`. LP runs all five; physical main tests use `bimodal` and
 `far_tail`.
 
-## Tolerance table (from tests, not guesses)
+## Numerical tolerances
 
 | Object | Tolerance | Source |
 |---|---|---|
@@ -109,7 +109,8 @@ pytest tests/test_frontier.py tests/test_lp.py tests/test_gamma2.py -q
 ```
 
 Real-data acceptance is manual/CLI, not pytest. If you run it, use
-`crashfrontier` subcommands; do not open a 9GB CSV from a test.
+`crashfrontier` subcommands; tests stay on small synthetic tables and do not
+open vendor-scale files.
 
 ## Writing new tests
 

@@ -160,7 +160,7 @@ Lexicographic: append the equality
 $(u_p p+u_L L)\cdot y=\mathrm{value}$, then maximise the rotated direction
 $(-u_L,u_p)/\mathrm{scale}$ to push a face point to an endpoint. `point`
 comes from the secondary solve (or the primary if that fails).
-`face_shortfall=\max(0,\mathrm{value}-u\cdot\mathrm{point})$. Reconstruction
+$\mathrm{face\_shortfall}=\max(0,\mathrm{value}-u\cdot\mathrm{point})$. Reconstruction
 oracles use `lexicographic=True`; `binding_quotes` and `marginal_bounds` use
 `False`.
 

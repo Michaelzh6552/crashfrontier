@@ -37,6 +37,11 @@ be NaN (for example when `prob_hi < 1e-4`) while the joint set is still
 populated. Vertex-table `depth = loss / prob` is then geometry, not a
 certified interval.
 
+"Certified" throughout this reference means certified up to the solver
+tolerances configured in `LPSettings` / `ConicSettings` (feasibility,
+duality gap, cone violation); no numerical bound is exact at arbitrary
+precision.
+
 ## Frontier {#frontier}
 
 `crashfrontier.Frontier` is a mutable dataclass. Users normally receive it

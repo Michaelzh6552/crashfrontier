@@ -150,8 +150,9 @@ Larger disagreement sets the public endpoints to NaN and records
   `Ratio view: probability ≥ …%`
 
 Therefore: the plotted depth band is $\phi(\mathrm{inner})$ for $p\ge p_0$;
-summary `depth_lo/hi` is the certified interval at γ>0 and the unclipped
-($p_0=0$) vertex ratio at γ=0. They need not agree.
+summary `depth_lo/hi` is the certified interval at γ>0 (up to solver
+tolerances) and the unclipped ($p_0=0$) vertex ratio at γ=0. They need not
+agree.
 
 Time-series `plot_time_series(..., value="depth")` plots the summary columns
 `depth_lo/hi` (×100 as percent): certified endpoints or γ=0 vertex depth, not

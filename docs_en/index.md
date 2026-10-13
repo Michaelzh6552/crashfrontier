@@ -4,8 +4,9 @@
     <h1>How likely.<br>How deep.</h1>
     <p class="cf-lead">
       Option-implied bounds on crash probability and expected loss, with the
-      conditional depth of every admissible crash scenario — from one
-      distribution, not two separate guesses.
+      conditional depth of every admissible crash scenario — from one joint
+      constraint set, since separate marginal bounds can pair values that no
+      single distribution supports.
     </p>
     <div class="cf-actions">
       <a class="md-button md-button--primary" href="getting-started/first-frontier.html">First figure</a>
@@ -13,7 +14,7 @@
     </div>
   </div>
   <figure class="cf-sheet__figure">
-    <img src="assets/images/hero/crash-frontier-concept.svg" alt="Concept illustration of the crash frontier: a gold inner bound and a blue outer bound forming the admissible band, sampled by option bid-ask quotes" loading="eager">
+    <img src="assets/images/hero/crash-frontier-concept.svg" alt="Concept illustration of the crash frontier: nested admissible regions for the put-pair, local-eight, and put-wing quote sets in crash probability and conditional depth" loading="eager">
   </figure>
   <dl class="cf-facts">
     <div>
@@ -53,12 +54,12 @@ Then follow [First figure](getting-started/first-frontier.md).
   <article class="cf-notation__row">
     <p class="cf-metric-symbol">p</p>
     <h3>Crash probability</h3>
-    <p>The admissible probability that the expiry value is below \(K\).</p>
+    <p>The admissible probability that the expiry value is at or below \(K\).</p>
   </article>
   <article class="cf-notation__row">
     <p class="cf-metric-symbol">L</p>
     <h3>Expected loss</h3>
-    <p>The unconditional expected shortfall below the threshold.</p>
+    <p>The unconditional expected shortfall at or below the threshold.</p>
   </article>
   <article class="cf-notation__row">
     <p class="cf-metric-symbol">s = L / p</p>

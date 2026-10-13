@@ -47,7 +47,7 @@ These bounds are enforced as explicit box constraints in the source.
    $b=\mathrm{unique}(\mathrm{round}(\{0\}\cup\{x_i\}\cup\{K\}\cup\{B\},12))$.
    With $B$, `n_cells=len(b)-1` (last right endpoint is $B$); without $B$,
    `n_cells=len(b)` (last cell $[b_J,\infty)$, `_right_endpoint` is `None`).
-5. `threshold_cell`: the unique index in `cell_starts` equal to $K`.
+5. `threshold_cell`: the unique index in `cell_starts` equal to $K$.
 
 Pinned example: $x\in\{0.8,1.0\}$, $K=0.9$, $B=5$ →
 
@@ -127,7 +127,7 @@ right endpoint, $m_\tau\le b_{\tau+1}z_\tau-(b_{\tau+1}-K)a$.
 
 Below-threshold SOC: $v_j z_j\ge m_j^2$, written
 `SOC(z_j+v_j, [2m_j, z_j-v_j])`, plus
-$v_j\le(b_j+b_{j+1})m_j-b_j b_{j+1}z_j`.
+$v_j\le(b_j+b_{j+1})m_j-b_j b_{j+1}z_j$.
 `test_below_threshold_cells_use_second_moment_soc` asserts that the SOC count
 equals `threshold_cell`.
 

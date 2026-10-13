@@ -165,7 +165,7 @@ each `filter_report` count, and `kept`.
 
 - `kept==0`: first check a column swap (bid/ask reversed, `dayfirst`, strike scaling), then consider a looser quote filter.
 - Large `uncrossed`: the market is crossed, or the map is wrong. Do not batch `ask = bid`.
-- Solve raises `InfeasibleCrossSectionError`: record the day, check the forward and settlement, change the quote set or the day. Fabricated rows — synthetic bid/ask or Black-76 mids — invalidate the bound.
+- Solve raises `InfeasibleCrossSectionError`: record the day and the failure, then check the forward and settlement. A different quote set or a different day is a separate reported analysis, not a remedy for the failed one. Fabricated rows — synthetic bid/ask or Black-76 mids — invalidate the bound.
 
 ## 8. Large files
 

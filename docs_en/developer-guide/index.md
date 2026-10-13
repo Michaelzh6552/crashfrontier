@@ -47,7 +47,7 @@ those pages rather than repeating their recipes.
 
 Fix an observation date $t$ and expiry $T$. Forward $F$, discount
 $D=\exp(-r\cdot\mathrm{days}/365)$ (`CrossSection.tau = days/365`; year length
-is hard-coded 365). Normalised state $X=S_T/F$, normalised strike $x=\kappa/F`.
+is hard-coded 365). Normalised state $X=S_T/F$, normalised strike $x=\kappa/F$.
 Each retained quote supplies an interval
 
 $$

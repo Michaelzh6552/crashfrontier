@@ -1,10 +1,11 @@
 # Project-private content (not published)
-# Data cache (local paths and licensed-data index)
-DATA/
+# Root-level data cache (local paths and licensed-data index).
+# Anchored to the repository root so it never matches crashfrontier/data/.
+/DATA/
 # Generated figures and tables
-outputs/
+/outputs/
 # Prebuilt site (published via the gh-pages workflow, not the main branch)
-site_en/
+/site_en/
 
 # Python
 __pycache__/

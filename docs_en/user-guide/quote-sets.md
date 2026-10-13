@@ -135,7 +135,7 @@ Each later layer's inner set should lie inside the previous one. When comparing 
 
 ### `support_cap` and the quote set are independent
 
-Shrinking \(B\) tightens the right tail; removing the upper bound is a different tail assumption. OTM puts and OTM calls can be physically mutually exclusive under support \([0,5]\), so `put_wing` on a cross-section can be feasible while `full_otm` is not. Change the quote set first; move \(B\) only when the research question itself allows an unbounded right tail.
+Shrinking \(B\) tightens the right tail; removing the upper bound is a different tail assumption. OTM puts and OTM calls can be physically mutually exclusive under support \([0,5]\), so `put_wing` on a cross-section can be feasible while `full_otm` is not. When a layer is infeasible, check the inputs and record the failure as a result; a different quote set or support cap is a separate research setting and should be reported as one, not used to make the solve pass.
 
 The script writes `outputs/user-guide/quote-sets/rn_nested.png`,
 `phys_nested.png`, and matching CSV / JSON. The risk-neutral put-wing
