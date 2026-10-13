@@ -42,7 +42,7 @@ risk-neutral distribution and runs the complete plotting and export workflow —
 from raw quotes to the frontier figure.
 
 ```bash
-python -m pip install crashfrontier
+python -m pip install "git+https://github.com/Michaelzh6552/crashfrontier.git"
 ```
 
 Then follow [First figure](getting-started/first-frontier.md).

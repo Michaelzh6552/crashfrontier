@@ -181,7 +181,7 @@ The script writes `outputs/user-guide/physical/gamma2.png` / `.pdf`, `gamma2_nes
 | Nested \(\gamma=1\) | `nested_frontiers(cs, 0.90, gamma=1, sets=("put_pair", "local_eight", "put_wing"), support_cap=5.0)` |
 | Other \(B\) | `support_cap=4.0` or `None` (another tail assumption) |
 | Coarser grid (faster, looser) | `grid_settings=GridSettings(levels=(16, 32), max_normalized_gap=0.05)` |
-| Fallback solvers | `python -m pip install 'crashfrontier[solvers]'`; CLARABEL is still tried first |
+| Fallback solvers | `python -m pip install "crashfrontier[solvers] @ git+https://github.com/Michaelzh6552/crashfrontier.git"`; CLARABEL is still tried first |
 
 ## Common errors
 

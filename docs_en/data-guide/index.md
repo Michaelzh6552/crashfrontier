@@ -4,7 +4,7 @@ How to turn an **OptionMetrics export** or **your own quote table** into a
 `Dataset` / `CrossSection` that `crashfrontier` can compute on. Behavior is
 taken from `crashfrontier/data/` and `tests/test_*.py`.
 
-Assumes an importable install (`pip install crashfrontier` is enough). CLI
+Assumes an importable install (the base [install](../getting-started/install.md) is enough). CLI
 (`inspect` / `index`) appears only where it matches a Python check.
 
 How to point the library at files you already hold:

@@ -119,7 +119,7 @@ Step 1 raises `SchemaError` when option tables live in a `RAW_DATA/` subdirector
 | Symptom | First step |
 |---|---|
 | `KeyError: 'CRASHFRONTIER_DATA'` | Export the path to your quote directory |
-| `ModuleNotFoundError` | Use the interpreter where you ran `python -m pip install crashfrontier`; see [install.md](../getting-started/install.md) |
+| `ModuleNotFoundError` | Use the interpreter where you installed `crashfrontier`; see [install.md](../getting-started/install.md) |
 | `no option tables in directory ...` | Switch to `Dataset.from_directory` so an optional `RAW_DATA/` folder is scanned |
 | `NoSuchDateError` | `available_dates()` / `nearest_date`; a failed string parse is a different problem |
 | Date exists, no eligible expiry | Print `expiries` and inspect `days`, `forward`, `n_put_strikes`, AM/PM |
@@ -144,7 +144,7 @@ The date index for a large CSV is `{cache_dir}/{stem}.index.json`. A stored sour
 
 `InfeasibleCrossSectionError` carries `date`, `expiry`, `quote_set`, `gamma`, `support_cap`, and `status`. At \(\gamma>0\) the message mentions default `full_otm` and retrying `put_wing` or `support_cap=None`.
 
-`SolverFailure` is often `support failed for direction ...`. Physical programs default to CLARABEL; inexact optima then try ECOS and SCS if installed: `python -m pip install 'crashfrontier[solvers]'`. Do not change the quote set to get past the solver. `status` equal to `infeasible` means there is no measure; an uncertified inexact optimum should be treated as a solver problem first.
+`SolverFailure` is often `support failed for direction ...`. Physical programs default to CLARABEL; inexact optima then try ECOS and SCS if installed: `python -m pip install "crashfrontier[solvers] @ git+https://github.com/Michaelzh6552/crashfrontier.git"`. Do not change the quote set to get past the solver. `status` equal to `infeasible` means there is no measure; an uncertified inexact optimum should be treated as a solver problem first.
 
 ### Depth NaN
 

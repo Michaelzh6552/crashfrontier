@@ -212,10 +212,13 @@ def test_parquet_missing_dependency_message(tmp_path: Path, monkeypatch: pytest.
         read_table(path)
 
     def missing_parquet_module():
-        raise ImportError("reading parquet requires pyarrow: pip install 'crashfrontier[parquet]'")
+        raise ImportError(
+            "reading parquet requires pyarrow: pip install \"crashfrontier[parquet] "
+            "@ git+https://github.com/Michaelzh6552/crashfrontier.git\""
+        )
 
     monkeypatch.setattr("crashfrontier.data.readers._parquet_module", missing_parquet_module)
-    with pytest.raises(ImportError, match=r"pip install 'crashfrontier\[parquet\]'"):
+    with pytest.raises(ImportError, match=r"crashfrontier\[parquet\] @ git\+"):
         peek_columns(path)
 
 
@@ -229,7 +232,7 @@ def test_excel_missing_dependency_message(tmp_path: Path, monkeypatch: pytest.Mo
     monkeypatch.setattr(pd, "read_excel", raise_import)
     with pytest.raises(ImportError, match=r"crashfrontier\[excel\]"):
         read_table(path)
-    with pytest.raises(ImportError, match=r"pip install 'crashfrontier\[excel\]'"):
+    with pytest.raises(ImportError, match=r"crashfrontier\[excel\] @ git\+"):
         peek_columns(path)
 
 
@@ -255,7 +258,7 @@ def test_legacy_excel_import_error_names_real_engine(
             reader(path)
         message = str(excinfo.value)
         assert package in message
-        assert "pip install 'crashfrontier[excel]'" in message
+        assert 'pip install "crashfrontier[excel] @ git+' in message
         assert f"openpyxl cannot read {path.suffix}" in message
 
 
@@ -274,7 +277,7 @@ def test_legacy_excel_read_error_is_not_blamed_on_openpyxl(
         read_table(path)
     message = str(excinfo.value)
     assert "openpyxl cannot read .xls" in message
-    assert "pip install 'crashfrontier[excel]'" in message
+    assert 'pip install "crashfrontier[excel] @ git+' in message
 
 
 def test_excel_reader_selects_engine_for_suffix(

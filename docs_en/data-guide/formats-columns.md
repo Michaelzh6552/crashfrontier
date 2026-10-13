@@ -26,8 +26,8 @@ Text reads use `encoding="utf-8-sig"`, `compression="infer"`,
 tab, and `|`; failure or an empty file → `,`. BOM + quoted headers keep the
 original names (`test_bom_header_names`): `Date` / `Price`.
 
-Missing PyArrow raises `ImportError` and mentions
-`pip install 'crashfrontier[parquet]'`. The `excel` extra installs
+Missing PyArrow raises `ImportError` and mentions installing the `parquet`
+extra from the repository URL. The `excel` extra installs
 `openpyxl` for `.xlsx` / `.xlsm`, `xlrd` for `.xls`, and `pyxlsb` for
 `.xlsb`. SAS uses `format="sas7bdat"`, `encoding="latin-1"`. Excel is read
 whole (`iter_table` yields once). Integer columns are cast to `float64` so

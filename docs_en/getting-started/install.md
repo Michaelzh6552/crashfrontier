@@ -17,8 +17,10 @@ Windows PowerShell: `.\.venv\Scripts\Activate.ps1`.
 
 ## pip
 
+The package is distributed from GitHub; there is no PyPI release:
+
 ```bash
-python -m pip install crashfrontier
+python -m pip install "git+https://github.com/Michaelzh6552/crashfrontier.git"
 ```
 
 CSV files and the default solver stack need nothing further. Add an extra only when you need that format or a fallback solver:
@@ -30,10 +32,10 @@ CSV files and the default solver stack need nothing further. Add an extra only w
 | `solvers` | ECOS and SCS, tried after CLARABEL on physical-measure cone programs |
 
 ```bash
-python -m pip install 'crashfrontier[parquet,excel,solvers]'
+python -m pip install "crashfrontier[parquet,excel,solvers] @ git+https://github.com/Michaelzh6552/crashfrontier.git"
 ```
 
-Any subset works: `'crashfrontier[parquet]'`, `'crashfrontier[excel]'`, `'crashfrontier[solvers]'`.
+Any subset works, for example `"crashfrontier[parquet] @ git+https://github.com/Michaelzh6552/crashfrontier.git"`.
 
 ## Check the install
 
@@ -44,7 +46,7 @@ python -c "import crashfrontier; print(crashfrontier.__version__)"
 A printed version string is enough. Continue with [Market data](data.md) or
 run the [self-contained first frontier](first-frontier.md).
 
-If `import crashfrontier` raises `ModuleNotFoundError`, the current `python` is not the environment where the package was installed. Check with `which python` (Windows: `where python`) and run `python -m pip install crashfrontier` in that interpreter.
+If `import crashfrontier` raises `ModuleNotFoundError`, the current `python` is not the environment where the package was installed. Check with `which python` (Windows: `where python`) and run the install command above in that interpreter.
 
 ## Install from a source tree
 

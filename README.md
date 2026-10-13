@@ -12,16 +12,17 @@ Python 3.10 or later is required.
 ## Install
 
 ```bash
-python -m pip install crashfrontier
+python -m pip install "git+https://github.com/Michaelzh6552/crashfrontier.git"
 ```
 
-The base install reads CSV and pandas tables and solves with CLARABEL.
-Install only the extras required by your workflow:
+The package is distributed from this GitHub repository; there is no PyPI
+release. The base install reads CSV and pandas tables and solves with
+CLARABEL. Install only the extras required by your workflow:
 
 ```bash
-python -m pip install "crashfrontier[parquet]"  # PyArrow
-python -m pip install "crashfrontier[excel]"    # XLSX, XLS, XLSB engines
-python -m pip install "crashfrontier[solvers]"  # ECOS and SCS fallbacks
+python -m pip install "crashfrontier[parquet] @ git+https://github.com/Michaelzh6552/crashfrontier.git"  # PyArrow
+python -m pip install "crashfrontier[excel] @ git+https://github.com/Michaelzh6552/crashfrontier.git"    # XLSX, XLS, XLSB engines
+python -m pip install "crashfrontier[solvers] @ git+https://github.com/Michaelzh6552/crashfrontier.git"  # ECOS and SCS fallbacks
 ```
 
 For development, run this in the source checkout containing `pyproject.toml`:

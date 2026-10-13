@@ -1,6 +1,7 @@
 # First crash frontier
 
-This example runs after `pip install crashfrontier`. It creates a small
+This example runs after [installing `crashfrontier`](install.md). It creates
+a small
 arbitrage-free option cross-section in memory, so it does not require
 OptionMetrics, a repository checkout, or a `DATA/` directory.
 

@@ -1,7 +1,7 @@
 # Examples
 
 These listings are **documentation**. After
-[`pip install crashfrontier`](../getting-started/install.md), copy a block
+[installing `crashfrontier`](../getting-started/install.md), copy a block
 into any local file and run it. You do not need the repository.
 
 Sample figures below (except the synthetic first panel) were computed on an
